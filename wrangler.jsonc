@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "feature-flag-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-08-05",
+  "d1_databases": [
+    {
+      "binding": "feature_flag_db",
+      "database_name": "feature-flag-db",
+      "database_id": "ef45ef64-dc2d-4c81-adf5-16651dfb0a2e"
+    }
+  ],
+}
