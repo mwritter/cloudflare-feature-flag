@@ -1,6 +1,6 @@
 import { Hono } from "hono";
 
-const app = new Hono<{ Bindings: CloudflareBindings }>();
+const app = new Hono<{ Bindings: CloudflareBindings }>().basePath("/api");
 
 app.get("/health", (c) => {
   return c.json({
@@ -46,11 +46,11 @@ app.post("/flags", async (c) => {
       enabled?: boolean;
       description?: string;
     }>();
-  } catch (err) {
+  } catch {
     return c.json({ message: "Invalid JSON body" }, 400);
   }
 
-  let errors: string[] = [];
+  const errors: string[] = [];
 
   if (!params.application_id) {
     errors.push("Missing application id");

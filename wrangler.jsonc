@@ -1,8 +1,17 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "feature-flag-api",
-  "main": "src/index.ts",
+  "main": "worker/index.ts",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+  "upload_source_maps": true,
   "compatibility_date": "2026-08-05",
+  "compatibility_flags": [
+		"nodejs_compat"
+	],
   "d1_databases": [
     {
       "binding": "feature_flag_db",
