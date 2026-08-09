@@ -7,7 +7,15 @@
     {
       "binding": "feature_flag_db",
       "database_name": "feature-flag-db",
-      "database_id": "ef45ef64-dc2d-4c81-adf5-16651dfb0a2e"
+      "database_id": "ef45ef64-dc2d-4c81-adf5-16651dfb0a2e",
+      "remote": true
     }
   ],
+  "kv_namespaces": [
+    {
+      "binding": "feature_flag_kv",
+      "id": "0bb0ade61a3147c8b0b9c27add977db8",
+      "remote": true
+    }
+  ]
 }
