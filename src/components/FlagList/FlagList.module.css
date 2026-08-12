@@ -100,3 +100,46 @@
   border: 1px dashed var(--border);
   border-radius: 6px;
 }
+
+.create {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.create input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 0.9rem;
+}
+
+.create input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.create button {
+  padding: 0.55rem 0.9rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  border-radius: 6px;
+  background: var(--accent-dim);
+  color: var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.create button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error {
+  margin: 0;
+  color: #e85d5d;
+  font-size: 0.85rem;
+}
